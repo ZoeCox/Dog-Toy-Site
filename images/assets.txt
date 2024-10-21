@@ -1,1 +1,9 @@
 "dogPlaying.jpg" image sourced from: https://unsplash.com/photos/a-dog-running-with-a-frisbee-in-its-mouth-pUF0_9-A_rc
+
+"twoDogsPlaying.jpg" image source from https://unsplash.com/photos/two-dogs-playing-with-each-other-in-a-yard-0d97yGHVg9k
+
+
+**NAVBAR is fine at small scale but at about 510 px width but funny until about 560px
+james says rems as rems are relative to the parent, so for sections use rems, ie. for the bits in a section or a div
+then the remn will keep everything locked relative to the other items in the items for scale. might have to trry and fiddle the values a little as they are bit diff to ems
+also ems are better for main/larger parts
