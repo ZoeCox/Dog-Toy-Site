@@ -86,11 +86,6 @@ h2 {
   max-width: 600px;
 }
 
-.dog-playing {
-  width: 100%;
-  object-fit: cover;
-}
-
 .intro-text {
   color: white;
   text-shadow: 0.075em 0.075em black;
@@ -138,8 +133,15 @@ h2 {
 }
 
 .footer-contact {
-  padding-bottom: 1em;
-  margin-top: -1em;
+  margin-bottom: 1em;
+}
+
+.contact-title{
+  display: inline-block
+}
+
+.contact-divider{
+  display:inline-block;
 }
 
 .contact-link {
@@ -160,16 +162,4 @@ h2 {
   h1 {
     padding-right: 12rem;
   }
-
-  /* .profile-icon {
-    padding-left: 1rem;
-  }
-
-  .basket-icon {
-    margin-right: -2rem;
-  } */
-
-  /* .carousel-img {
-    margin-bottom: 6.5rem;
-  } */
 }
