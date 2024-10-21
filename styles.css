@@ -39,6 +39,19 @@ body {
   margin-bottom: 1em;
 }
 
+.company-logo{
+  text-decoration: none;
+}
+
+.company-logo:hover{
+  cursor: pointer;
+    text-shadow: 0.055em 0.055em rgba(0, 0, 0, 0.185);
+}
+
+.company-logo:visited{
+  color: black;
+}
+
 .basket-icon,
 .profile-icon,
 h1 {
@@ -55,11 +68,12 @@ h1 {
   margin-left: -2.5em;
   margin-right: -0.375em;
   cursor: pointer;
+  text-decoration: none;
 }
 
 main {
   margin: 4em 2em 2.5em 2em;
-  font-size: 1.15em;
+  font-size: 1.375em;
 }
 
 h2 {
@@ -82,14 +96,35 @@ h2 {
   align-items: center;
   height: 65vmin;
   width: 85vmin;
-  margin-top: 3em;
+  margin-top: 1.5em;
   max-width: 600px;
 }
+
+.intro-block:hover{
+  opacity: 0.75;
+  }
+
 
 .intro-text {
   color: white;
   text-shadow: 0.075em 0.075em black;
-  font-size: 5vmin;
+  font-size: 6vmin;
+}
+
+/* .hover-text-container{
+  bottom: -10% !important;
+} */
+
+.hover-text{
+ color: white;
+  text-shadow: 0.075em 0.075em black;
+  font-size: 4vmin;
+    text-decoration: none;
+}
+
+.hover-text:hover{
+  cursor: pointer;
+  color: teal;
 }
 
 .divider {
@@ -132,8 +167,12 @@ h2 {
   padding-right: 0.75em;
 }
 
+h4{
+  margin-bottom: -0.5em;
+}
+
 .footer-contact {
-  margin-bottom: 1em;
+  margin-bottom: 0.25em;
 }
 
 .contact-title{
@@ -154,11 +193,10 @@ h2 {
 }
 
 @media (min-width: 500px) {
-  .footer-contact {
-    padding-bottom: 1em;
-    padding-top: -0.5em;
-  }
 
+  .intro-text {
+  font-size: 5vmin;
+}
   h1 {
     padding-right: 12rem;
   }
