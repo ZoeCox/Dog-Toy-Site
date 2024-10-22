@@ -52,24 +52,23 @@ body {
   color: black;
 }
 
-.basket-icon,
-.profile-icon,
-h1 {
-  display: inline-block;
-}
-
 h1 {
   margin: 0.75em 5em 0.75em -2em;
 }
 
 .basket-icon,
 .profile-icon {
+    display: inline-block;
   font-size: 2em;
   margin-left: -2.5em;
   margin-right: -0.375em;
   cursor: pointer;
   text-decoration: none;
 }
+
+
+.basket-total{
+  display: inline-block}
 
 main {
   margin: 4em 2em 2.5em 2em;
@@ -111,10 +110,6 @@ h2 {
   font-size: 6vmin;
 }
 
-/* .hover-text-container{
-  bottom: -10% !important;
-} */
-
 .hover-text{
  color: white;
   text-shadow: 0.075em 0.075em black;
@@ -130,6 +125,35 @@ h2 {
 .divider {
   border: 0.1em black solid;
   width: 100%;
+}
+
+.product-display-container{
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+}
+
+.toy-container{
+  overflow: hidden;
+  height: 24rem;
+  width: 24vw;
+  border: 0.05em black none;
+  border-radius: 1%;
+  padding-top: 1.25em;
+  box-shadow: 0.3em 0.3em 0.75em rgba(0, 0, 0, 0.185);
+}
+
+.product-image{
+  box-shadow: -0.15em 0 0.75em rgba(0, 0, 0, 0.185)
+}
+
+.add-basket{
+  cursor: pointer;
+  padding-bottom: 1em;
+}
+
+.add-basket:hover{
+  color: teal;
 }
 
 .carousel {

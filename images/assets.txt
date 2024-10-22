@@ -2,6 +2,13 @@
 
 "twoDogsPlaying.jpg" image source from https://unsplash.com/photos/two-dogs-playing-with-each-other-in-a-yard-0d97yGHVg9k
 
+"reindeerToy" image source from https://unsplash.com/photos/brown-deer-plush-toy-JsjXnWlh8-g
+
+"monkeyToy" image source from https://unsplash.com/photos/sock-monkey-plush-toy-on-brown-panel-5INN0oj12u4
+
+"tennisBall" image source from https://unsplash.com/photos/shallow-focus-photography-of-tennis-ball-VEW78A1YZ6I
+
+"kongToy" image source from https://unsplash.com/photos/red-kong-bone-figure-on-teal-surface-NOLrgL3hUJg
 
 **NAVBAR is fine at small scale but at about 510 px width but funny until about 560px
 james says rems as rems are relative to the parent, so for sections use rems, ie. for the bits in a section or a div
