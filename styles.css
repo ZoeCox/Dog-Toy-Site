@@ -30,9 +30,11 @@ body {
 }
 
 .header-banner {
+  display: inline-flex;
   box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.25);
   background-color: #ffffff;
   width: 100vw;
+  max-height: 9vh;
   top: 0%;
   position: fixed;
   z-index: 1;
@@ -53,22 +55,23 @@ body {
 }
 
 h1 {
-  margin: 0.75em 5em 0.75em -2em;
+  margin: 0.75em 2em 0.75em -2em;
+}
+
+.header-icon-container{
+  margin-left: -2rem;
 }
 
 .basket-icon,
 .profile-icon {
-    display: inline-block;
+
   font-size: 2em;
-  margin-left: -2.5em;
-  margin-right: -0.375em;
   cursor: pointer;
   text-decoration: none;
 }
 
-
 .basket-total{
-  display: inline-block}
+  display: inline-flex}
 
 main {
   margin: 4em 2em 2.5em 2em;
