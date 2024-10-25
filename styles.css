@@ -34,44 +34,45 @@ body {
   box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.25);
   background-color: #ffffff;
   width: 100vw;
-  max-height: 9vh;
+  max-height: 11vh;
   top: 0%;
   position: fixed;
   z-index: 1;
   margin-bottom: 1em;
 }
 
-.company-logo{
+.company-logo {
   text-decoration: none;
 }
 
-.company-logo:hover{
+.company-logo:hover {
   cursor: pointer;
-    text-shadow: 0.055em 0.055em rgba(0, 0, 0, 0.185);
+  text-shadow: 0.055em 0.055em rgba(0, 0, 0, 0.185);
 }
 
-.company-logo:visited{
+.company-logo:visited {
   color: black;
 }
 
 h1 {
-  margin: 0.75em 2em 0.75em -2em;
+  margin: 0.75em 2em 0.75em 1em;
 }
 
-.header-icon-container{
-  margin-left: -2rem;
+.header-icon-container {
+  margin-left: -2em;
+  margin-top: 1.25em;
 }
 
 .basket-icon,
 .profile-icon {
-
   font-size: 2em;
   cursor: pointer;
   text-decoration: none;
 }
 
-.basket-total{
-  display: inline-flex}
+.basket-total {
+  display: inline-flex;
+}
 
 main {
   margin: 4em 2em 2.5em 2em;
@@ -102,10 +103,9 @@ h2 {
   max-width: 600px;
 }
 
-.intro-block:hover{
+.intro-block:hover {
   opacity: 0.75;
-  }
-
+}
 
 .intro-text {
   color: white;
@@ -113,14 +113,14 @@ h2 {
   font-size: 6vmin;
 }
 
-.hover-text{
- color: white;
+.hover-text {
+  color: white;
   text-shadow: 0.075em 0.075em black;
   font-size: 4vmin;
-    text-decoration: none;
+  text-decoration: none;
 }
 
-.hover-text:hover{
+.hover-text:hover {
   cursor: pointer;
   color: teal;
 }
@@ -130,13 +130,13 @@ h2 {
   width: 100%;
 }
 
-.product-display-container{
+.product-display-container {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   justify-content: space-between;
 }
 
-.toy-container{
+.toy-container {
   overflow: hidden;
   height: 24rem;
   width: 24vw;
@@ -146,16 +146,16 @@ h2 {
   box-shadow: 0.3em 0.3em 0.75em rgba(0, 0, 0, 0.185);
 }
 
-.product-image{
-  box-shadow: -0.15em 0 0.75em rgba(0, 0, 0, 0.185)
+.product-image {
+  box-shadow: -0.15em 0 0.75em rgba(0, 0, 0, 0.185);
 }
 
-.add-basket{
+.add-basket {
   cursor: pointer;
   padding-bottom: 1em;
 }
 
-.add-basket:hover{
+.add-basket:hover {
   color: teal;
 }
 
@@ -194,7 +194,7 @@ h2 {
   padding-right: 0.75em;
 }
 
-h4{
+h4 {
   margin-bottom: -0.5em;
 }
 
@@ -202,12 +202,12 @@ h4{
   margin-bottom: 0.25em;
 }
 
-.contact-title{
-  display: inline-block
+.contact-title {
+  display: inline-block;
 }
 
-.contact-divider{
-  display:inline-block;
+.contact-divider {
+  display: inline-block;
 }
 
 .contact-link {
@@ -220,10 +220,9 @@ h4{
 }
 
 @media (min-width: 500px) {
-
   .intro-text {
-  font-size: 5vmin;
-}
+    font-size: 5vmin;
+  }
   h1 {
     padding-right: 12rem;
   }
