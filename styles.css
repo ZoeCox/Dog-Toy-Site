@@ -33,13 +33,14 @@ body {
   display: inline-flex;
   box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.25);
   background-color: #ffffff;
-  width: 100vw;
+  width: calc(100%);
   max-height: 11vh;
   top: 0%;
   position: fixed;
   z-index: 1;
   margin-bottom: 1em;
 }
+
 
 .company-logo {
   text-decoration: none;
@@ -61,6 +62,8 @@ h1 {
 .header-icon-container {
   margin-left: -2em;
   margin-top: 1.25em;
+  position: absolute;
+  right: 5%;
 }
 
 .basket-icon,
@@ -132,17 +135,26 @@ h2 {
 
 .product-display-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
+}
+
+
+.product-row1, .product-row2{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .toy-container {
   overflow: hidden;
-  height: 24rem;
-  width: 24vw;
+  height: 22rem;
+  width: 45vw;
   border: 0.05em black none;
   border-radius: 1%;
-  padding-top: 1.25em;
+  padding: 1.25em 0.75em 0 0.75em;
+  margin-bottom: 1.25em;
   box-shadow: 0.3em 0.3em 0.75em rgba(0, 0, 0, 0.185);
 }
 
@@ -220,10 +232,26 @@ h4 {
 }
 
 @media (min-width: 500px) {
+
+    .intro-block{
+    width: 90vmin;
+  }
   .intro-text {
     font-size: 5vmin;
   }
   h1 {
     padding-right: 12rem;
   }
+
+  .toy-container{
+    height: 30rem;
+  }
 }
+
+@media (min-width: 1050px) {
+  .toy-container{
+    height: 38rem;
+    width: 25vw
+  }
+}
+

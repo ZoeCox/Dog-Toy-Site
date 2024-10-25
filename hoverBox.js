@@ -18,7 +18,3 @@ introBlock.addEventListener("mouseover", () => {
 introBlock.addEventListener("mouseup", () => {
   hoverText.classList.add("hidden");
 });
-
-toyBox1.addEventListener("click", () => {
-  toy1Text.innerHTML = "hello";
-});
