@@ -1,32 +1,47 @@
 const addBasketBtns = document.querySelectorAll(".add-basket");
-let basketTotal = document.querySelector(".basket-total");
+const basketTotal = document.querySelector(".basket-total");
 
 const boneElement = document.querySelector(".toy1");
 const monkeyElement = document.querySelector(".toy2");
 const reindeerElement = document.querySelector(".toy3");
 const ballElement = document.querySelector(".toy4");
 
-const toys = {
-  bone: "Bone Toy",
-  monkey: "Monkey Toy",
-  reindeer: "Reindeer Toy",
-  ball: "Ball Toy",
+const storedBasket = JSON.parse(localStorage.getItem("basket"));
+
+const basket = {
+  bone: 0,
+  monkey: 0,
+  reindeer: 0,
+  ball: 0,
+  ...storedBasket,
 };
+console.log(basket);
+
+let summedTotal = 0;
+
+let basketCondensed = Object.values(basket);
+for (let i = 0; i < basketCondensed.length; i++) {
+  if (typeof i === number) {
+    summedTotal = summedTotal + basketCondensed[i];
+  } else {
+    continue;
+  }
+}
+// let summedBasket = basketCondensed.reduce;
+// console.log(summedBasket);
+// basketTotal.innerHTML = summedBasket;
+
+// (basketTotal.innerHTML = console.log(storedBasket.monkey));
 
 let basketedToys = [];
 
-// const buttonsArr = Array.from(addBasketBtns);
-// console.log(buttonsArr, typeof buttonsArr);
-
 function buttonHandling() {
-  let basketValue = Number(basketTotal.innerHTML);
+  basketValue = Number(basketTotal.innerHTML);
   basketValue++;
-  console.log(basketedToys);
   if (basketValue > 20 || basketedToys.length > 20) {
     alert("Your basket has reached its limit.");
     return;
   }
-  console.log(basketValue, typeof basketValue);
   basketTotal.innerHTML = basketValue;
 }
 
@@ -34,17 +49,21 @@ for (let i = 0; i < addBasketBtns.length; i++) {
   addBasketBtns[i].addEventListener("click", function () {
     buttonHandling();
     if (i === 0) {
-      basketedToys.push(toys.bone);
+      basket.bone++;
+      basketedToys.push(basket.bone);
     }
     if (i === 1) {
-      basketedToys.push(toys.monkey);
+      basket.monkey++;
+      basketedToys.push(basket.monkey);
     }
     if (i === 2) {
-      basketedToys.push(toys.reindeer);
+      basket.reindeer++;
+      basketedToys.push(basket.reindeer);
     }
     if (i === 3) {
-      basketedToys.push(toys.ball);
+      basket.ball++;
+      basketedToys.push(basket.ball);
     }
-    console.log(basketedToys);
+    localStorage.setItem("basket", JSON.stringify(basket)); // console.log(basketedToys, basket);
   });
 }

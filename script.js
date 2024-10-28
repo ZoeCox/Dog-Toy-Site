@@ -6,3 +6,5 @@
 // Emily T.: "Happy Dog Toys has the best selection! I found the perfect plush toy for my small dog, and he carries it everywhere. Great customer service, too. I’m a loyal fan!"
 
 // Mark S.: "I was looking for eco-friendly options, and Happy Dog Toys delivered! The natural materials used in their toys are impressive. My dog loves them, and I feel good about my purchase!"
+//look at reduce array method
+//also look at objet.keys, object.values, and object.entries
