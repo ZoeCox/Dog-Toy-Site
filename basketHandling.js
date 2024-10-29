@@ -18,21 +18,8 @@ const basket = {
 console.log(basket);
 
 let summedTotal = 0;
-
+basketTotal.innerHTML = summedTotal;
 let basketCondensed = Object.values(basket);
-for (let i = 0; i < basketCondensed.length; i++) {
-  if (typeof i === number) {
-    summedTotal = summedTotal + basketCondensed[i];
-  } else {
-    continue;
-  }
-}
-// let summedBasket = basketCondensed.reduce;
-// console.log(summedBasket);
-// basketTotal.innerHTML = summedBasket;
-
-// (basketTotal.innerHTML = console.log(storedBasket.monkey));
-
 let basketedToys = [];
 
 function buttonHandling() {
@@ -42,7 +29,15 @@ function buttonHandling() {
     alert("Your basket has reached its limit.");
     return;
   }
-  basketTotal.innerHTML = basketValue;
+  for (let i = 0; i < basketCondensed.length; i++) {
+    if (typeof i === "number") {
+      summedTotal = summedTotal + basketCondensed[i];
+      console.log(summedTotal);
+    } else {
+      continue;
+    }
+  }
+  return summedTotal;
 }
 
 for (let i = 0; i < addBasketBtns.length; i++) {
@@ -64,6 +59,12 @@ for (let i = 0; i < addBasketBtns.length; i++) {
       basket.ball++;
       basketedToys.push(basket.ball);
     }
-    localStorage.setItem("basket", JSON.stringify(basket)); // console.log(basketedToys, basket);
+    localStorage.setItem("basket", JSON.stringify(basket));
   });
 }
+
+// let summedBasket = basketCondensed.reduce;
+// console.log(summedBasket);
+// basketTotal.innerHTML = summedBasket;
+
+// (basketTotal.innerHTML = console.log(storedBasket.monkey));
