@@ -8,3 +8,36 @@
 // Mark S.: "I was looking for eco-friendly options, and Happy Dog Toys delivered! The natural materials used in their toys are impressive. My dog loves them, and I feel good about my purchase!"
 //look at reduce array method
 //also look at objet.keys, object.values, and object.entries
+
+// testing
+
+// function buttonHandling() {
+//   // if (summedTotal > 20 || basketCondensed.length > 20) {
+//   //   alert("Your basket has reached its limit.");
+//   //   return;
+//   // }
+//   // for (let i = 0; i < basketCondensed.length; i++) {
+//   //   const totalPrice = (basketTotal.innerHTML = basketCondensed.reduce(
+//   //     totalAddition(summedTotal, 0)
+//   //   ));
+//   // }
+//   // for (let i = 0; i < basketCondensed.length; i++) {
+//   //   // summedTotal = summedTotal + basketCondensed[i];
+//   //   summedTotal = summedTotal + basketCondensed[i];
+//   //   basketTotal.innerHTML = summedTotal;
+//   //   console.log(typeof summedTotal);
+//   // }
+// }
+
+// // function totalAddition(total, currentValue) {
+// //   return total + currentValue;
+// // }
+
+// for (let i = 0; i < basketCondensed.length; i++) {
+//   basketValues.summedTotal += basketCondensed[i];
+// }
+
+// const boneElement = document.querySelector(".toy1");
+// const monkeyElement = document.querySelector(".toy2");
+// const reindeerElement = document.querySelector(".toy3");
+// const ballElement = document.querySelector(".toy4");
