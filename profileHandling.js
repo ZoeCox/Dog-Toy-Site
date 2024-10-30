@@ -1,15 +1,18 @@
 const nameInput = document.querySelector(".name-input");
 const nameSubmit = document.querySelector(".name-submit");
+const nameDisplay = document.querySelector(".name-display");
+
+const storedUserDetails = JSON.parse(localStorage.getItem("userDetails"));
 
 const userDetails = {
   name: "",
-  //   ...storedUserDetails,
+  ...storedUserDetails,
 };
 
-// const storedUserDetails = JSON.parse(localStorage.getItem("userDetails"));
-
 nameSubmit.addEventListener("click", () => {
-  userDetails.name = nameInput.innerHTML;
+  userDetails.name = nameInput.value;
   console.log(userDetails.name, typeof userDetails.name);
-  //   localStorage.setItem("userDetails", JSON.stringify(userDetails));
+  localStorage.setItem("userDetails", JSON.stringify(userDetails));
 });
+
+nameDisplay.innerHTML = `User Name: ${userDetails.name}`;
