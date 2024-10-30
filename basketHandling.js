@@ -48,7 +48,7 @@ const basketValues = {
 let basketCondensed = Object.values(basket);
 
 for (let i = 0; i < addBasketBtns.length; i++) {
-  addBasketBtns[i].addEventListener("click", function () {
+  addBasketBtns[i]?.addEventListener("click", function () {
     if (basketValues.summedTotal >= 20) {
       alert("You have reached your basket limit of 20 items");
       return;
@@ -81,7 +81,7 @@ for (let i = 0; i < addBasketBtns.length; i++) {
 //main page basket addition handling
 
 for (let i = 0; i < minusButtons.length; i++) {
-  minusButtons[i].addEventListener("click", () => {
+  minusButtons[i]?.addEventListener("click", () => {
     if (i === 0 && basket.bone > 0) {
       basket.bone--;
       basketValues.summedTotal--;
@@ -113,7 +113,7 @@ for (let i = 0; i < minusButtons.length; i++) {
 //minus decrement handling
 
 for (let i = 0; i < plusButtons.length; i++) {
-  plusButtons[i].addEventListener("click", () => {
+  plusButtons[i]?.addEventListener("click", () => {
     if (basketValues.summedTotal >= 20) {
       alert("You have reached your basket limit of 20 items");
       return;
@@ -176,7 +176,7 @@ if (
 }
 //basket quantity display
 
-emptyBasket.addEventListener("click", () => {
+emptyBasket?.addEventListener("click", () => {
   localStorage.clear("storedBasket");
   localStorage.clear("storedBasketValues");
   location.reload();
