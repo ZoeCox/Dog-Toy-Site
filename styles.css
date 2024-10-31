@@ -171,6 +171,19 @@ h2 {
   color: teal;
 }
 
+.bone-page-link, .monkey-page-link, .reindeer-page-link, .ball-page-link{
+ text-decoration: none;
+ color: black;
+}
+
+.bone-page-link:hover, .monkey-page-link:hover, .reindeer-page-link:hover, .ball-page-link:hover{
+  color: teal;
+}
+
+.bone-page-link:visited, .monkey-page-link:visited, .reindeer-page-link:visited, .ball-page-link:visited{
+  color: black;
+}
+
 .carousel {
   display: flex;
   flex-direction: column;
@@ -216,6 +229,13 @@ h2 {
   width: 6em;
   height: 3em;
   margin-top: 1em;
+}
+
+.favourite-button{
+  font-size: 0.75em;
+  width: 4em;
+  height: 2em;
+  margin-left: 0.5em; 
 }
 
 .contact-title {

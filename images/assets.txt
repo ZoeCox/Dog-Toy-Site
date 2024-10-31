@@ -26,6 +26,22 @@ also ems are better for main/larger parts
 
 // Mark S.: "I was looking for eco-friendly options, and Happy Dog Toys delivered! The natural materials used in their toys are impressive. My dog loves them, and I feel good about my purchase!"
 //look at reduce array method
+
+
+### Red Rubber Bone  
+The ultimate chew toy, our red rubber bone is designed for durability and fun! Its textured surface promotes healthy gums and teeth while satisfying your pup's natural urge to chew. Lightweight yet robust, it's perfect for toss-and-fetch games, keeping your furry friend engaged and entertained for hours.
+
+### Stuffed Squeaky Monkey Toy  
+Bring joy to playtime with our stuffed squeaky monkey toy! This cuddly companion features a soft exterior and an enticing squeaker that sparks your dog's curiosity. Perfect for snuggling or interactive play, its charming design will capture your pup's heart while promoting healthy exercise and bonding moments together.
+
+### Plush Reindeer  
+Celebrate the season with our adorable plush reindeer toy! Crafted from soft, high-quality materials, this cuddly creature features a squeaker to keep your dog entertained. Its festive design adds a touch of holiday cheer, making it the perfect companion for snuggling or playful adventures during the winter months.
+
+### Eco-Friendly Tennis Ball  
+Let your pup play guilt-free with our eco-friendly tennis ball! Made from sustainable materials, it’s designed for tough chewers while providing endless fun. Its vibrant color and bounce make it ideal for fetch, encouraging active play. Treat your furry friend to a toy that's both enjoyable and planet-friendly!
+
+
+
 //also look at objet.keys, object.values, and object.entries
 
 // testing
