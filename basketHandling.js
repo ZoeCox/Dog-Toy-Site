@@ -177,8 +177,8 @@ if (
 //basket quantity display
 
 emptyBasket?.addEventListener("click", () => {
-  localStorage.clear("storedBasket");
-  localStorage.clear("storedBasketValues");
+  localStorage.removeItem("basket");
+  localStorage.removeItem("basketValues");
   location.reload();
 });
 //basket clearing
