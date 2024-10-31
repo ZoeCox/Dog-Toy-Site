@@ -41,7 +41,6 @@ body {
   margin-bottom: 1em;
 }
 
-
 .company-logo {
   text-decoration: none;
 }
@@ -138,7 +137,6 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
 }
-
 
 .product-row1, .product-row2{
   display: flex;
