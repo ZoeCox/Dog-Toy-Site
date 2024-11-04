@@ -138,7 +138,8 @@ h2 {
   justify-content: space-between;
 }
 
-.product-row1, .product-row2{
+.product-row1,
+.product-row2 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -171,16 +172,25 @@ h2 {
   color: teal;
 }
 
-.bone-page-link, .monkey-page-link, .reindeer-page-link, .ball-page-link{
- text-decoration: none;
- color: black;
+.bone-page-link,
+.monkey-page-link,
+.reindeer-page-link,
+.ball-page-link {
+  text-decoration: none;
+  color: black;
 }
 
-.bone-page-link:hover, .monkey-page-link:hover, .reindeer-page-link:hover, .ball-page-link:hover{
+.bone-page-link:hover,
+.monkey-page-link:hover,
+.reindeer-page-link:hover,
+.ball-page-link:hover {
   color: teal;
 }
 
-.bone-page-link:visited, .monkey-page-link:visited, .reindeer-page-link:visited, .ball-page-link:visited{
+.bone-page-link:visited,
+.monkey-page-link:visited,
+.reindeer-page-link:visited,
+.ball-page-link:visited {
   color: black;
 }
 
@@ -219,23 +229,29 @@ h2 {
   padding-right: 0.75em;
 }
 
-.bone-stepper, .monkey-stepper, .reindeer-stepper, .ball-stepper{
+.bone-stepper,
+.monkey-stepper,
+.reindeer-stepper,
+.ball-stepper {
   margin-top: -0.4em;
 }
 
-.empty-basket{
-  font-family:"Lato", sans-serif;
+.empty-basket {
+  font-family: "Lato", sans-serif;
   font-size: 1em;
   width: 6em;
   height: 3em;
   margin-top: 1em;
 }
 
-.favourite-button{
+.bone-fave-button,
+.monkey-fave-button,
+.reindeer-fave-button,
+.ball-fave-button {
   font-size: 0.75em;
   width: 4em;
   height: 2em;
-  margin-left: 0.5em; 
+  margin-left: 0.5em;
 }
 
 .contact-title {
@@ -264,8 +280,7 @@ h2 {
 }
 
 @media (min-width: 500px) {
-
-    .intro-block{
+  .intro-block {
     width: 90vmin;
   }
   .intro-text {
@@ -275,36 +290,35 @@ h2 {
     padding-right: 12rem;
   }
 
-  .toy-container{
+  .toy-container {
     height: 30rem;
   }
 }
 
 @media (min-width: 1040px) {
-  .toy-container{
+  .toy-container {
     height: 26rem;
-    width: 25vw
+    width: 25vw;
   }
 }
 
 @media (min-width: 1400px) {
-  .toy-container{
+  .toy-container {
     height: 30rem;
-    width: 25vw
+    width: 25vw;
   }
 }
 
 @media (min-width: 1900px) {
-  .toy-container{
+  .toy-container {
     height: 36rem;
-    width: 25vw
+    width: 25vw;
   }
 }
 
 @media (min-width: 2500px) {
-  .toy-container{
+  .toy-container {
     height: 42rem;
-    width: 25vw
+    width: 25vw;
   }
 }
-
