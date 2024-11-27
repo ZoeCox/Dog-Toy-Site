@@ -60,6 +60,13 @@
               <h3 class="toy1-text"> <a class="bone-page-link"
                   href="./bone-toy.html">Red Rubber Bone</a></h3>
               <btn class="add-basket" type="submit">Add to Basket</btn>
+              <div class="favourite-container">
+                <br>
+                <label for="bone-favourite"><strong>Add to your
+                    favourites:</strong></label>
+                <button name="bone-favourite"
+                  class="bone-fave-button">🩶</button>
+              </div>
             </div>
             <div class="toy2 toy-container">
               <a class="monkey-page-link" href="./monkey-toy.html"><img
@@ -69,6 +76,13 @@
               <h3 class="toy2-text"><a class="monkey-page-link"
                   href="./monkey-toy.html">Squeaky Stuffed Monkey</a></h3>
               <btn class="add-basket" type="submit">Add to Basket</btn>
+              <div class="favourite-container">
+                <br>
+                <label for="monkey-favourite"><strong>Add to your
+                    favourites:</strong></label>
+                <button name="monkey-favourite"
+                  class="monkey-fave-button">🩶</button>
+              </div>
             </div>
           </div>
           <div class="product-row2">
@@ -80,6 +94,13 @@
               <h3 class="toy3-text"><a class="reindeer-page-link"
                   href="./reindeer-toy.html">Christmas Reindeer Plush</a></h3>
               <btn class="add-basket" type="submit">Add to Basket</btn>
+              <div class="favourite-container">
+                <br>
+                <label for="reindeer-favourite"><strong>Add to your
+                    favourites:</strong></label>
+                <button name="reindeer-favourite"
+                  class="reindeer-fave-button">🩶</button>
+              </div>
             </div>
             <div class="toy4 toy-container">
               <a class="ball-page-link" href="./ball-toy.html"> <img
@@ -89,9 +110,19 @@
               <h3 class="toy4-text"><a class="ball-page-link"
                   href="./ball-toy.html">Eco Tennis Ball</a></h3>
               <btn class="add-basket" type="submit">Add to Basket</btn>
+              <div class="favourite-container">
+                <br>
+                <label for="ball-favourite"><strong>Add to your
+                    favourites:</strong></label>
+                <button name="ball-favourite"
+                  class="ball-fave-button">🩶</button>
+              </div>
             </div>
           </div>
         </div>
+        <h5>Your current favourite toys are:</h5>
+        <p class="favourite-text"></p>
+        <button class="empty-favourites" type="button">Clear Favourites</button>
       </div>
       <hr class="divider" />
       <h3>Here's what our customers have to say about us:</h3>
@@ -144,5 +175,6 @@
     <script src="carousel.js"></script>
     <script src="hoverBox.js"></script>
     <script src="basketHandling.js"></script>
+    <script src="favouriteHandling.js"></script>
   </body>
 </html>

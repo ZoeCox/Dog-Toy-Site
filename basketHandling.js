@@ -1,4 +1,3 @@
-// localStorage.clear();
 const addBasketBtns = document.querySelectorAll(".add-basket");
 const basketTotal = document.querySelector(".basket-total");
 
@@ -49,8 +48,24 @@ let basketCondensed = Object.values(basket);
 
 for (let i = 0; i < addBasketBtns.length; i++) {
   addBasketBtns[i]?.addEventListener("click", function () {
-    if (basketValues.summedTotal >= 20) {
-      alert("You have reached your basket limit of 20 items");
+    if (basketValues.summedTotal > 79) {
+      alert("You've reached your basket limit");
+      return;
+    }
+    if (basket.bone > 19 && addBasketBtns[i] === 0) {
+      alert("You have reached your item limit");
+      return;
+    }
+    if (basket.monkey > 19 && addBasketBtns[i] === 1) {
+      alert("You have reached your item limit");
+      return;
+    }
+    if (basket.reindeer > 19 && addBasketBtns[i] === 2) {
+      alert("You have reached your item limit");
+      return;
+    }
+    if (basket.ball > 19 && addBasketBtns[i] === 3) {
+      alert("You have reached your item limit");
       return;
     }
     if (i === 0) {
@@ -114,29 +129,41 @@ for (let i = 0; i < minusButtons.length; i++) {
 
 for (let i = 0; i < plusButtons.length; i++) {
   plusButtons[i]?.addEventListener("click", () => {
-    if (basketValues.summedTotal >= 20) {
-      alert("You have reached your basket limit of 20 items");
+    if (basket.bone > 19 && plusButtons[i] === 0) {
+      alert("You have reached your item limit");
       return;
     }
-    if (i === 0 && basketValues.summedTotal < 20) {
+    if (basket.monkey > 19 && plusButtons[i] === 1) {
+      alert("You have reached your item limit");
+      return;
+    }
+    if (basket.reindeer > 19 && plusButtons[i] === 2) {
+      alert("You have reached your item limit");
+      return;
+    }
+    if (basket.ball > 19 && plusButtons[i] === 3) {
+      alert("You have reached your item limit");
+      return;
+    }
+    if (i === 0 && basketValues.summedTotal < 80 && basket.bone <= 19) {
       basket.bone++;
       basketValues.summedTotal++;
       basketTotal.innerHTML = basketValues.summedTotal;
       boneBasketed.innerHTML = `🦴 Bone Toys: ${basket.bone}`;
     }
-    if (i === 1 && basketValues.summedTotal < 20) {
+    if (i === 1 && basketValues.summedTotal < 80 && basket.monkey <= 19) {
       basket.monkey++;
       basketValues.summedTotal++;
       basketTotal.innerHTML = basketValues.summedTotal;
       monkeyBasketed.innerHTML = `🐒 Monkey Toys: ${basket.monkey}`;
     }
-    if (i === 2 && basketValues.summedTotal < 20) {
+    if (i === 2 && basketValues.summedTotal < 80 && basket.reindeer <= 19) {
       basket.reindeer++;
       basketValues.summedTotal++;
       basketTotal.innerHTML = basketValues.summedTotal;
       reindeerBasketed.innerHTML = `🦌 Reindeer Toys: ${basket.reindeer}`;
     }
-    if (i === 3 && basketValues.summedTotal < 20) {
+    if (i === 3 && basketValues.summedTotal < 80 && basket.ball <= 19) {
       basket.ball++;
       basketValues.summedTotal++;
       basketTotal.innerHTML = basketValues.summedTotal;
