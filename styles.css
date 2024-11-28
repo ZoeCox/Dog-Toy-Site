@@ -148,7 +148,7 @@ h2 {
 
 .toy-container {
   overflow: hidden;
-  height: 22rem;
+  height: 28rem;
   width: 45vw;
   border: 0.05em black none;
   border-radius: 1%;
@@ -296,15 +296,11 @@ h2 {
   h1 {
     padding-right: 12rem;
   }
-
-  .toy-container {
-    height: 30rem;
-  }
 }
 
 @media (min-width: 1000px) {
   .toy-container {
-    height: 28rem;
+    height: 30rem;
     width: 25vw;
   }
 }

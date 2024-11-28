@@ -52,22 +52,6 @@ for (let i = 0; i < addBasketBtns.length; i++) {
       alert("You've reached your basket limit");
       return;
     }
-    if (basket.bone > 19 && addBasketBtns[i] === 0) {
-      alert("You have reached your item limit");
-      return;
-    }
-    if (basket.monkey > 19 && addBasketBtns[i] === 1) {
-      alert("You have reached your item limit");
-      return;
-    }
-    if (basket.reindeer > 19 && addBasketBtns[i] === 2) {
-      alert("You have reached your item limit");
-      return;
-    }
-    if (basket.ball > 19 && addBasketBtns[i] === 3) {
-      alert("You have reached your item limit");
-      return;
-    }
     if (i === 0) {
       basket.bone++;
       basketValues.summedTotal++;
@@ -129,20 +113,8 @@ for (let i = 0; i < minusButtons.length; i++) {
 
 for (let i = 0; i < plusButtons.length; i++) {
   plusButtons[i]?.addEventListener("click", () => {
-    if (basket.bone > 19 && plusButtons[i] === 0) {
-      alert("You have reached your item limit");
-      return;
-    }
-    if (basket.monkey > 19 && plusButtons[i] === 1) {
-      alert("You have reached your item limit");
-      return;
-    }
-    if (basket.reindeer > 19 && plusButtons[i] === 2) {
-      alert("You have reached your item limit");
-      return;
-    }
-    if (basket.ball > 19 && plusButtons[i] === 3) {
-      alert("You have reached your item limit");
+    if (basketValues.summedTotal > 79) {
+      alert("You've reached your basket limit");
       return;
     }
     if (i === 0 && basketValues.summedTotal < 80 && basket.bone <= 19) {
