@@ -23,6 +23,17 @@ const favouriteToys = {
   ...storedFavouriteToys,
 };
 
+if (
+  favouriteToys.currentFaveToys === undefined ||
+  favouriteToys.currentFaveToys.length === 0
+) {
+  emptyFavourites.classList.add("hidden");
+} else {
+  emptyFavourites.classList.remove("hidden");
+}
+//fix it so that if favourite's have been cleared, and a favourite then readded that the clear button reappears
+//rather than just staying disappeared until the page is refreshed/reloaded
+
 if (favouriteToys.currentFaveToys.length === 0) {
   faveText.innerHTML = "You don't currently have any favourites";
 } else {

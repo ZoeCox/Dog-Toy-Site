@@ -25,6 +25,13 @@ const monkeyStepper = document.querySelector(".monkey-stepper");
 const reindeerStepper = document.querySelector(".reindeer-stepper");
 const ballStepper = document.querySelector(".ball-stepper");
 
+const boneBinBtn = document.querySelector(".bone-bin");
+const monkeyBinBtn = document.querySelector(".monkey-bin");
+const reindeerBinBtn = document.querySelector(".reindeer-bin");
+const ballBinBtn = document.querySelector(".ball-bin");
+
+const binButtons = [boneBinBtn, monkeyBinBtn, reindeerBinBtn, ballBinBtn];
+
 const emptyBasket = document.querySelector(".empty-basket");
 
 const storedBasket = JSON.parse(localStorage.getItem("basket"));
@@ -146,6 +153,40 @@ for (let i = 0; i < plusButtons.length; i++) {
   });
 }
 //plus increment handling
+
+for (let i = 0; i < binButtons.length; i++) {
+  binButtons[i]?.addEventListener("click", () => {
+    console.log("bin buttons are working");
+    if (i === 0 && basket.bone > 0) {
+      basketValues.summedTotal -= basket.bone;
+      basket.bone -= basket.bone;
+      basketTotal.innerHTML = basketValues.summedTotal;
+      location.reload();
+    }
+    if (i === 1 && basket.monkey > 0) {
+      basketValues.summedTotal -= basket.monkey;
+      basket.monkey -= basket.monkey;
+      basketTotal.innerHTML = basketValues.summedTotal;
+      location.reload();
+    }
+    if (i === 2 && basket.reindeer > 0) {
+      basketValues.summedTotal -= basket.reindeer;
+      basket.reindeer -= basket.reindeer;
+      basketTotal.innerHTML = basketValues.summedTotal;
+      location.reload();
+    }
+    if (i === 3 && basket.ball > 0) {
+      basketValues.summedTotal -= basket.ball;
+      basket.ball -= basket.ball;
+      basketTotal.innerHTML = basketValues.summedTotal;
+      location.reload();
+    }
+    localStorage.setItem("basket", JSON.stringify(basket));
+    localStorage.setItem("basketValues", JSON.stringify(basketValues));
+    //
+  });
+}
+//item bin empty handling
 
 basketTotal.innerHTML = basketValues.summedTotal;
 
