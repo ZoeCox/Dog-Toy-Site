@@ -31,8 +31,6 @@ if (
 } else {
   emptyFavourites.classList.remove("hidden");
 }
-//fix it so that if favourite's have been cleared, and a favourite then readded that the clear button reappears
-//rather than just staying disappeared until the page is refreshed/reloaded
 
 if (favouriteToys.currentFaveToys.length === 0) {
   faveText.innerHTML = "You don't currently have any favourites";
@@ -40,40 +38,31 @@ if (favouriteToys.currentFaveToys.length === 0) {
   faveText.innerHTML = storedFavouriteToys.currentFaveToys.join(", ");
 }
 
+const faveMap = {
+  [boneFaveBtn.className]: "Bone",
+  [monkeyFaveBtn.className]: "Monkey",
+  [reindeerFaveBtn.className]: "Reindeer",
+  [ballFaveBtn.className]: "Ball",
+};
+
 for (let i = 0; i < favouriteButtons.length; i++) {
   favouriteButtons[i]?.addEventListener("click", () => {
     favouriteButtons[i].innerHTML = "❤️";
+    if (
+      favouriteToys.currentFaveToys.includes(
+        faveMap[favouriteButtons[i].className]
+      )
+    ) {
+      alert(
+        `You already have ${faveMap[
+          favouriteButtons[i].className
+        ].toLowerCase()} in your favourites`
+      );
+      return;
+    }
     if (favouriteToys.currentFaveToys.length >= 4) {
       alert("You have reached your maximum of four favourites");
       //add a modal pop up here instead
-      return;
-    }
-    if (
-      favouriteButtons[i] === boneFaveBtn &&
-      favouriteToys.currentFaveToys.includes("Bone")
-    ) {
-      alert("You already have bone in your favourites");
-      return;
-    }
-    if (
-      favouriteButtons[i] === monkeyFaveBtn &&
-      favouriteToys.currentFaveToys.includes("Monkey")
-    ) {
-      alert("You already have monkey in your favourites");
-      return;
-    }
-    if (
-      favouriteButtons[i] === reindeerFaveBtn &&
-      favouriteToys.currentFaveToys.includes("Reindeer")
-    ) {
-      alert("You already have reindeer in your favourites");
-      return;
-    }
-    if (
-      favouriteButtons[i] === ballFaveBtn &&
-      favouriteToys.currentFaveToys.includes("Ball")
-    ) {
-      alert("You already have ball in your favourites");
       return;
     }
     //checking if item is in favourites
@@ -96,6 +85,7 @@ for (let i = 0; i < favouriteButtons.length; i++) {
     //adding item to favourites
     faveText.innerHTML = favouriteToys.currentFaveToys.join(", ");
     localStorage.setItem("favouriteToys", JSON.stringify(favouriteToys));
+    // location.reload();
   });
 }
 
