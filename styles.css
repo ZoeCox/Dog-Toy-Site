@@ -148,7 +148,7 @@ h2 {
 
 .toy-container {
   overflow: hidden;
-  height: 28rem;
+  height: 29.5rem;
   width: 45vw;
   border: 0.05em black none;
   border-radius: 1%;
@@ -261,6 +261,19 @@ h2 {
   margin-left: 0.5em;
 }
 
+.add-basket, .item-price{
+  display: inline-block;
+}
+
+.item-price{
+  margin-left: 0.5em;
+    border: 0.1em solid black;
+    border-radius: 15%;
+    padding: 0.25em;
+      box-shadow: -0.1em 0 0.8em rgba(0, 0, 0, 0.185);
+
+}
+
 .contact-title {
   margin-bottom: -0.5em;
 }
@@ -298,30 +311,30 @@ h2 {
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
   .toy-container {
     height: 30rem;
-    width: 25vw;
+    width: 28vw;
   }
 }
 
 @media (min-width: 1400px) {
   .toy-container {
-    height: 30rem;
-    width: 25vw;
+    height: 34rem;
+    width: 28vw;
   }
 }
 
 @media (min-width: 1900px) {
   .toy-container {
-    height: 36rem;
-    width: 25vw;
+    height: 40rem;
+    width: 28vw;
   }
 }
 
 @media (min-width: 2500px) {
   .toy-container {
     height: 42rem;
-    width: 25vw;
+    width: 28vw;
   }
 }

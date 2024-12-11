@@ -59,22 +59,22 @@ for (let i = 0; i < addBasketBtns.length; i++) {
       alert("You've reached your basket limit");
       return;
     }
-    if (i === 0) {
+    if (addBasketBtns[i].classList.contains("bone-basket")) {
       basket.bone++;
       basketValues.summedTotal++;
       basketTotal.innerHTML = basketValues.summedTotal;
     }
-    if (i === 1) {
+    if (addBasketBtns[i].classList.contains("monkey-basket")) {
       basket.monkey++;
       basketValues.summedTotal++;
       basketTotal.innerHTML = basketValues.summedTotal;
     }
-    if (i === 2) {
+    if (addBasketBtns[i].classList.contains("reindeer-basket")) {
       basket.reindeer++;
       basketValues.summedTotal++;
       basketTotal.innerHTML = basketValues.summedTotal;
     }
-    if (i === 3) {
+    if (addBasketBtns[i].classList.contains("ball-basket")) {
       basket.ball++;
       basketValues.summedTotal++;
       basketTotal.innerHTML = basketValues.summedTotal;
@@ -213,6 +213,7 @@ if (
   basket.ball === 0
 ) {
   boneBasketed.innerHTML = "Your basket is empty";
+  emptyBasket.classList.add("hidden");
 }
 //basket quantity display
 

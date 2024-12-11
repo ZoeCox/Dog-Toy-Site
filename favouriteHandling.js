@@ -15,34 +15,36 @@ const favouriteButtons = [
 const storedFavouriteToys = JSON.parse(localStorage.getItem("favouriteToys"));
 
 const favouriteToys = {
-  boneToy: false,
-  monkeyToy: false,
-  reindeerToy: false,
-  ballToy: false,
   currentFaveToys: [],
+  boneFaveBtnPressed: false,
   ...storedFavouriteToys,
 };
 
-if (
-  favouriteToys.currentFaveToys === undefined ||
-  favouriteToys.currentFaveToys.length === 0
-) {
-  emptyFavourites.classList.add("hidden");
-} else {
-  emptyFavourites.classList.remove("hidden");
-}
+const faveQtyFunc = () => {
+  if (
+    favouriteToys.currentFaveToys === undefined ||
+    favouriteToys.currentFaveToys.length === 0
+  ) {
+    emptyFavourites.classList.add("hidden");
+  }
+  if (favouriteToys.currentFaveToys.length === 0) {
+    faveText.innerHTML = "You don't currently have any favourites";
+  } else {
+    faveText.innerHTML = storedFavouriteToys.currentFaveToys.join(", ");
+  }
+};
 
-if (favouriteToys.currentFaveToys.length === 0) {
-  faveText.innerHTML = "You don't currently have any favourites";
-} else {
-  faveText.innerHTML = storedFavouriteToys.currentFaveToys.join(", ");
-}
+const faveBtnPressedCheck = () => {
+  if (boneFaveBtnPressed) {
+    boneFaveBtnPressed.innerHTML = "❤️";
+  }
+};
 
 const faveMap = {
-  [boneFaveBtn.className]: "Bone",
-  [monkeyFaveBtn.className]: "Monkey",
-  [reindeerFaveBtn.className]: "Reindeer",
-  [ballFaveBtn.className]: "Ball",
+  [boneFaveBtn?.className]: "Bone",
+  [monkeyFaveBtn?.className]: "Monkey",
+  [reindeerFaveBtn?.className]: "Reindeer",
+  [ballFaveBtn?.className]: "Ball",
 };
 
 for (let i = 0; i < favouriteButtons.length; i++) {
@@ -67,27 +69,32 @@ for (let i = 0; i < favouriteButtons.length; i++) {
     }
     //checking if item is in favourites
     if (favouriteButtons[i] === boneFaveBtn) {
-      favouriteToys.boneToy = true;
       favouriteToys.currentFaveToys.push("Bone");
+      boneFaveBtnPressed = true;
     }
     if (favouriteButtons[i] === monkeyFaveBtn) {
-      favouriteToys.monkeyToy = true;
       favouriteToys.currentFaveToys.push("Monkey");
     }
     if (favouriteButtons[i] === reindeerFaveBtn) {
-      favouriteToys.reindeerToy = true;
       favouriteToys.currentFaveToys.push("Reindeer");
     }
     if (favouriteButtons[i] === ballFaveBtn) {
-      favouriteToys.ballToy = true;
       favouriteToys.currentFaveToys.push("Ball");
     }
     //adding item to favourites
     faveText.innerHTML = favouriteToys.currentFaveToys.join(", ");
     localStorage.setItem("favouriteToys", JSON.stringify(favouriteToys));
-    // location.reload();
+    if (
+      favouriteToys.currentFaveToys.length >= 1 &&
+      favouriteToys.currentFaveToys.length < 2
+    ) {
+      location.reload();
+      emptyFavourites.classList.remove("hidden");
+    }
   });
+  faveQtyFunc();
 }
+faveBtnPressedCheck();
 
 emptyFavourites.addEventListener("click", () => {
   localStorage.removeItem("favouriteToys");
