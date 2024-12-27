@@ -34,11 +34,15 @@ const faveQtyFunc = () => {
   }
 };
 
-const faveBtnPressedCheck = () => {
-  if (boneFaveBtnPressed) {
-    boneFaveBtnPressed.innerHTML = "❤️";
-  }
-};
+// const faveBtnPressedCheck = () => {
+//   if (favouriteButtons.boneFaveBtnPressed) {
+//     boneFaveBtn.innerHTML = "❤️";
+//   }
+// };
+
+if (storedFavouriteToys.boneFaveBtnPressed) {
+  boneFaveBtn.innerHTML = "❤️";
+}
 
 const faveMap = {
   [boneFaveBtn?.className]: "Bone",
@@ -70,7 +74,7 @@ for (let i = 0; i < favouriteButtons.length; i++) {
     //checking if item is in favourites
     if (favouriteButtons[i] === boneFaveBtn) {
       favouriteToys.currentFaveToys.push("Bone");
-      boneFaveBtnPressed = true;
+      favouriteButtons.boneFaveBtnPressed = true;
     }
     if (favouriteButtons[i] === monkeyFaveBtn) {
       favouriteToys.currentFaveToys.push("Monkey");
@@ -94,7 +98,7 @@ for (let i = 0; i < favouriteButtons.length; i++) {
   });
   faveQtyFunc();
 }
-faveBtnPressedCheck();
+// faveBtnPressedCheck();
 
 emptyFavourites.addEventListener("click", () => {
   localStorage.removeItem("favouriteToys");
