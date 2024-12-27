@@ -17,8 +17,17 @@ const storedFavouriteToys = JSON.parse(localStorage.getItem("favouriteToys"));
 const favouriteToys = {
   currentFaveToys: [],
   boneFaveBtnPressed: false,
+  monkeyFaveBtnPressed: false,
+  reindeerFaveBtnPressed: false,
+  ballFaveBtnPressed: false,
   ...storedFavouriteToys,
 };
+
+// const faveBtnPressedCheck = () => {
+//   if (favouriteButtons.boneFaveBtnPressed) {
+//     boneFaveBtn.innerHTML = "❤️";
+//   }
+// };
 
 const faveQtyFunc = () => {
   if (
@@ -34,14 +43,17 @@ const faveQtyFunc = () => {
   }
 };
 
-// const faveBtnPressedCheck = () => {
-//   if (favouriteButtons.boneFaveBtnPressed) {
-//     boneFaveBtn.innerHTML = "❤️";
-//   }
-// };
-
-if (storedFavouriteToys.boneFaveBtnPressed) {
+if (storedFavouriteToys?.boneFaveBtnPressed && boneFaveBtn != null) {
   boneFaveBtn.innerHTML = "❤️";
+}
+if (storedFavouriteToys?.monkeyFaveBtnPressed && monkeyFaveBtn != null) {
+  monkeyFaveBtn.innerHTML = "❤️";
+}
+if (storedFavouriteToys?.reindeerFaveBtnPressed && reindeerFaveBtn != null) {
+  reindeerFaveBtn.innerHTML = "❤️";
+}
+if (storedFavouriteToys?.ballFaveBtnPressed && ballFaveBtn != null) {
+  ballFaveBtn.innerHTML = "❤️";
 }
 
 const faveMap = {
@@ -74,16 +86,19 @@ for (let i = 0; i < favouriteButtons.length; i++) {
     //checking if item is in favourites
     if (favouriteButtons[i] === boneFaveBtn) {
       favouriteToys.currentFaveToys.push("Bone");
-      favouriteButtons.boneFaveBtnPressed = true;
+      favouriteToys.boneFaveBtnPressed = true;
     }
     if (favouriteButtons[i] === monkeyFaveBtn) {
       favouriteToys.currentFaveToys.push("Monkey");
+      favouriteToys.monkeyFaveBtnPressed = true;
     }
     if (favouriteButtons[i] === reindeerFaveBtn) {
       favouriteToys.currentFaveToys.push("Reindeer");
+      favouriteToys.reindeerFaveBtnPressed = true;
     }
     if (favouriteButtons[i] === ballFaveBtn) {
       favouriteToys.currentFaveToys.push("Ball");
+      favouriteToys.ballFaveBtnPressed = true;
     }
     //adding item to favourites
     faveText.innerHTML = favouriteToys.currentFaveToys.join(", ");

@@ -1,66 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Happy Dog Toys - Profile</title>
-        <meta name="description" content="A company that sells dog toys" />
-        <link rel="stylesheet" href="styles.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-            rel="stylesheet" />
-    </head>
-    <body>
-        <div class="header-banner">
-            <h1><a class="company-logo" href="index.html">Happy Dog
-                    Toys</a></h1>
-            <div class="header-icon-container">
-                <a class="basket-icon" href="basket.html">🛒</a>
-                <p class="basket-total"></p>
-                <a class="profile-icon" href="profile.html">👤</a>
-            </div>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Dog Toys - Profile</title>
+    <meta name="description" content="A company that sells dog toys" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA////APLw7QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiAAAAACIAACEQAAABEgAAAhIiEREQAAAAEREREQAAAAISIhIhEAAAISAAAAIRAAAiAAAAACIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAD//wAAz/MAAIfhAACAAQAAwAMAAOAHAADAAwAAgAEAAIfhAADP8wAA//8AAP//AAD//wAA"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <!--Favicon from: https://www.favicon.cc/?action=icon&file_id=1000138 -->
+  </head>
+  <body>
+    <div class="header-banner">
+      <h1><a class="company-logo" href="index.html">Happy Dog Toys</a></h1>
+      <div class="header-icon-container">
+        <a class="basket-icon" href="basket.html">🛒</a>
+        <p class="basket-total"></p>
+        <a class="profile-icon" href="profile.html">👤</a>
+      </div>
     </div>
 
     <main>
-        <img
-                  class="monkeyToy-image product-image"
-                  src="./images/monkeyToy.jpg"
-                  alt="monkey plush toy with hat sitting on wooden surface" />
-                    <div class="product-description">
-                <h2>Squeaky Stuffed Monkey</h2>
-                  <p>Bring joy to playtime with our stuffed squeaky monkey toy! This cuddly companion features a soft exterior and an enticing squeaker that sparks your dog's curiosity. Perfect for snuggling or interactive play, its charming design will capture your pup's heart while promoting healthy exercise and bonding moments together.</p>
-                    </div>
-                  <div class="basket-pricing-container">             <btn class="add-basket monkey-basket" type="submit">Add to Basket</btn><p class="item-price">£5.00</p>    
-</div>
-                    <div class="favourite-container">
-            <label for="monkey-favourite"><strong>Add Squeaky Monkey to your favourites:</strong></label>
-            <button name="monkey-favourite" class="monkey-fave-button">🩶</button>
-        </div>
-             <h5>Your current favourite toys are:</h5>
-            <p class="favourite-text"></p>  
-                  <button class="empty-favourites" type="button">Clear Favourites</button>
+      <img
+        class="monkeyToy-image product-image"
+        src="./images/monkeyToy.jpg"
+        alt="monkey plush toy with hat sitting on wooden surface"
+      />
+      <div class="product-description">
+        <h2>Squeaky Stuffed Monkey</h2>
+        <p>
+          Bring joy to playtime with our stuffed squeaky monkey toy! This cuddly
+          companion features a soft exterior and an enticing squeaker that
+          sparks your dog's curiosity. Perfect for snuggling or interactive
+          play, its charming design will capture your pup's heart while
+          promoting healthy exercise and bonding moments together.
+        </p>
+      </div>
+      <div class="basket-pricing-container">
+        <btn class="add-basket monkey-basket" type="submit">Add to Basket</btn>
+        <p class="item-price">£5.00</p>
+      </div>
+      <div class="favourite-container">
+        <label for="monkey-favourite"
+          ><strong>Add Squeaky Monkey to your favourites:</strong></label
+        >
+        <button name="monkey-favourite" class="monkey-fave-button">🩶</button>
+      </div>
+      <h5>Your current favourite toys are:</h5>
+      <p class="favourite-text"></p>
+      <button class="empty-favourites" type="button">Clear Favourites</button>
     </main>
-        <hr class="divider" />
-        <footer>
-            <h4>Happy Dog Toys Ltd</h4>
-            <div class="footer-contact">
-                <h4 class="contact-title"><strong>Contact:</strong></h4>
-                <a class="contact-link" alt="fictional phone number"
-                    href="mailto:zoemcox16@gmail.com">0123 456789</a>
-                <p class="contact-divider">|</p>
-                <a
-                    class="contact-link"
-                    alt="link to site creator's email"
-                    href="mailto:zoemcox16@gmail.com">contact@fictional.com</a>
-                <p class="contact-divider">|</p>
-                <p class="contact-divider">123 Fic Street, Faux Town</p>
-            </div>
-        </footer>
-        <script src="script.js"></script>
-        <script src="favouriteHandling.js"></script>
-        <script src="basketHandling.js"></script>
-    </body>
+    <hr class="divider" />
+    <footer>
+      <h4>Happy Dog Toys Ltd</h4>
+      <div class="footer-contact">
+        <h4 class="contact-title"><strong>Contact:</strong></h4>
+        <a
+          class="contact-link"
+          alt="fictional phone number"
+          href="mailto:zoemcox16@gmail.com"
+          >0123 456789</a
+        >
+        <p class="contact-divider">|</p>
+        <a
+          class="contact-link"
+          alt="link to site creator's email"
+          href="mailto:zoemcox16@gmail.com"
+          >contact@fictional.com</a
+        >
+        <p class="contact-divider">|</p>
+        <p class="contact-divider">123 Fic Street, Faux Town</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="favouriteHandling.js"></script>
+    <script src="basketHandling.js"></script>
+  </body>
 </html>
