@@ -43,18 +43,22 @@ const faveQtyFunc = () => {
   }
 };
 
-if (storedFavouriteToys?.boneFaveBtnPressed && boneFaveBtn != null) {
-  boneFaveBtn.innerHTML = "❤️";
-}
-if (storedFavouriteToys?.monkeyFaveBtnPressed && monkeyFaveBtn != null) {
-  monkeyFaveBtn.innerHTML = "❤️";
-}
-if (storedFavouriteToys?.reindeerFaveBtnPressed && reindeerFaveBtn != null) {
-  reindeerFaveBtn.innerHTML = "❤️";
-}
-if (storedFavouriteToys?.ballFaveBtnPressed && ballFaveBtn != null) {
-  ballFaveBtn.innerHTML = "❤️";
-}
+const faveBtnPressedCheck = () => {
+  if (storedFavouriteToys?.boneFaveBtnPressed && boneFaveBtn != null) {
+    boneFaveBtn.innerHTML = "❤️";
+  }
+  if (storedFavouriteToys?.monkeyFaveBtnPressed && monkeyFaveBtn != null) {
+    monkeyFaveBtn.innerHTML = "❤️";
+  }
+  if (storedFavouriteToys?.reindeerFaveBtnPressed && reindeerFaveBtn != null) {
+    reindeerFaveBtn.innerHTML = "❤️";
+  }
+  if (storedFavouriteToys?.ballFaveBtnPressed && ballFaveBtn != null) {
+    ballFaveBtn.innerHTML = "❤️";
+  }
+};
+
+faveBtnPressedCheck();
 
 const faveMap = {
   [boneFaveBtn?.className]: "Bone",
@@ -113,7 +117,6 @@ for (let i = 0; i < favouriteButtons.length; i++) {
   });
   faveQtyFunc();
 }
-// faveBtnPressedCheck();
 
 emptyFavourites.addEventListener("click", () => {
   localStorage.removeItem("favouriteToys");

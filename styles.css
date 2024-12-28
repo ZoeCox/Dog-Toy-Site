@@ -236,7 +236,10 @@ h2 {
   margin-top: -0.4em;
 }
 
-.empty-basket, .empty-favourites,  .name-submit {
+.empty-basket,
+.empty-favourites,
+.name-submit,
+.remove-icon-button {
   font-family: "Lato", sans-serif;
   font-size: 1em;
   width: 6em;
@@ -244,7 +247,7 @@ h2 {
   margin-top: 1em;
 }
 
-.name-input{
+.name-input {
   font-size: 1em;
   width: 14em;
   height: 3em;
@@ -261,17 +264,30 @@ h2 {
   margin-left: 0.5em;
 }
 
-.add-basket, .item-price{
+.add-basket,
+.item-price {
   display: inline-block;
 }
 
-.item-price{
+.item-price {
   margin-left: 0.5em;
-    border: 0.1em solid black;
-    border-radius: 15%;
-    padding: 0.25em;
-      box-shadow: -0.1em 0 0.8em rgba(0, 0, 0, 0.185);
+  border: 0.1em solid black;
+  border-radius: 15%;
+  padding: 0.25em;
+  box-shadow: -0.1em 0 0.8em rgba(0, 0, 0, 0.185);
+}
 
+.profile-icon-container {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 50%;
+  width: 50%;
+}
+
+.profile-image {
+  width: 50%;
+  height: 50%;
 }
 
 .contact-title {
