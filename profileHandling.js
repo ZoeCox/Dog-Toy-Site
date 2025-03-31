@@ -24,7 +24,7 @@ const userDetails = {
   ...storedUserDetails,
 };
 
-const iconChecker = (profileValue) => {
+const iconChecker = () => {
   if (userDetails.profileIcon === "male light") {
     maleDarkIcon.classList.add("hidden");
     femaleLightIcon.classList.add("hidden");
@@ -59,8 +59,6 @@ nameSubmit.addEventListener("click", () => {
 
 nameDisplay.innerHTML = `User Name: ${userDetails.name}`;
 welcomeName.innerHTML = `Welcome back, ${userDetails.name}!`;
-
-// userDetails.profileIcon = "maleLightIcon";
 
 for (let i = 0; i < profileIcons.length; i++) {
   profileIcons[i].addEventListener("click", () => {
