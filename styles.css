@@ -105,10 +105,6 @@ h2 {
   max-width: 600px;
 }
 
-.intro-block:hover {
-  opacity: 0.75;
-}
-
 .intro-text {
   color: white;
   text-shadow: 0.075em 0.075em black;
